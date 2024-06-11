@@ -1,0 +1,10 @@
+flax_led\mui_u8g2.o: ..\hardware\u8g2\mui_u8g2.c
+flax_led\mui_u8g2.o: ..\hardware\u8g2\mui.h
+flax_led\mui_u8g2.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+flax_led\mui_u8g2.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+flax_led\mui_u8g2.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\string.h
+flax_led\mui_u8g2.o: ..\hardware\u8g2\u8g2.h
+flax_led\mui_u8g2.o: ..\hardware\u8g2\u8x8.h
+flax_led\mui_u8g2.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdarg.h
+flax_led\mui_u8g2.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\limits.h
+flax_led\mui_u8g2.o: ..\hardware\u8g2\mui_u8g2.h

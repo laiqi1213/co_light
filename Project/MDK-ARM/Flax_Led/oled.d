@@ -48,4 +48,6 @@ flax_led\oled.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM
 flax_led\oled.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 flax_led\oled.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 flax_led\oled.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+flax_led\oled.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 flax_led\oled.o: ..\hardware\OLED\oled.h
+flax_led\oled.o: ..\hardware\OLED\MENU.h

@@ -69,15 +69,15 @@ const osThreadAttr_t Key_Task_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for KEY_Queue */
-osMessageQueueId_t KEY_QueueHandle;
-const osMessageQueueAttr_t KEY_Queue_attributes = {
-  .name = "KEY_Queue"
+/* Definitions for KEY_NUM_Queue */
+osMessageQueueId_t KEY_NUM_QueueHandle;
+const osMessageQueueAttr_t KEY_NUM_Queue_attributes = {
+  .name = "KEY_NUM_Queue"
 };
-/* Definitions for OLED_Queue */
-osMessageQueueId_t OLED_QueueHandle;
-const osMessageQueueAttr_t OLED_Queue_attributes = {
-  .name = "OLED_Queue"
+/* Definitions for OLED_DIS_Queue */
+osMessageQueueId_t OLED_DIS_QueueHandle;
+const osMessageQueueAttr_t OLED_DIS_Queue_attributes = {
+  .name = "OLED_DIS_Queue"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,11 +114,11 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_TIMERS */
 
   /* Create the queue(s) */
-  /* creation of KEY_Queue */
-  KEY_QueueHandle = osMessageQueueNew (16, sizeof(uint16_t), &KEY_Queue_attributes);
+  /* creation of KEY_NUM_Queue */
+  KEY_NUM_QueueHandle = osMessageQueueNew (16, sizeof(uint16_t), &KEY_NUM_Queue_attributes);
 
-  /* creation of OLED_Queue */
-  OLED_QueueHandle = osMessageQueueNew (32, sizeof(uint16_t), &OLED_Queue_attributes);
+  /* creation of OLED_DIS_Queue */
+  OLED_DIS_QueueHandle = osMessageQueueNew (32, sizeof(uint16_t), &OLED_DIS_Queue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */

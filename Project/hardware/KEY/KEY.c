@@ -5,7 +5,7 @@
 #include "queue.h"
 #include "cmsis_os.h"
 Key_Str Key_Num;
-extern osMessageQueueId_t KEY_QueueHandle;
+extern osMessageQueueId_t KEY_NUM_QueueHandle;
 
 
 void Key_Data_Init(void)
@@ -17,7 +17,8 @@ void Key_Data_Init(void)
 	Key_Num.Key_Fast_Get=0;
 	Key_Num.Key_Last_Get=0;
 }
-	
+
+
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
@@ -57,7 +58,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			
 		}
 		else
-			return;
+			return ;
 }
 
 //消抖和传递
@@ -73,12 +74,14 @@ void Key_DisJump(void)
 		{
 			Key_Num.last_key_num=Key_Num.now_key_num;
 			Key_Num.now_key_num=Key_Num.Key_Last_Get;
-			osMessageQueuePut(KEY_QueueHandle,&Key_Num.now_key_num,1,0);
+			osMessageQueuePut(KEY_NUM_QueueHandle,&Key_Num.now_key_num,1,0);//值进队列KEY_NUM_QUEUE
 			Key_Num.Key_State=0;
 		}
 		if(Key_Num.Key_Last_Get!=Key_Num.Key_Fast_Get)
 		{
-			
+			Key_Num.last_key_num=0;
+			Key_Num.now_key_num=0;
+			Key_Num.Key_State=0;
 		}
 	}
 }

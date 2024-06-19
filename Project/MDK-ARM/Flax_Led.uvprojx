@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../hardware/KEY;../hardware/OLED;../hardware/u8g2;..\hardware\led</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../hardware/KEY;../hardware/OLED;../hardware/u8g2;../hardware/led</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -849,6 +849,11 @@
               <FileType>1</FileType>
               <FilePath>..\hardware\OLED\OLED.c</FilePath>
             </File>
+            <File>
+              <FileName>MENU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hardware\OLED\MENU.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -865,14 +870,9 @@
           <GroupName>led</GroupName>
           <Files>
             <File>
-              <FileName>led.c</FileName>
+              <FileName>LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\led.c</FilePath>
-            </File>
-            <File>
-              <FileName>led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\led.h</FilePath>
+              <FilePath>..\hardware\led\LED.c</FilePath>
             </File>
           </Files>
         </Group>
